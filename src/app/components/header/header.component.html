@@ -1,0 +1,27 @@
+<mat-toolbar>
+
+  <div class="center-container">
+    <div class="logo">
+      COVID19 Tracker PH
+    </div>
+  
+    <div class="nav-menu">
+      
+      <button mat-button (click)="redirectTo('dashboard')">Summary</button>
+      <!-- <button mat-button [matMenuTriggerFor]="aboveMenu">Summary</button> -->
+      <!-- <mat-menu #aboveMenu="matMenu" yPosition="above">
+        <button mat-menu-item (click)="redirectTo('dashboard')">Overall</button>
+        <button mat-menu-item>Confirmed</button>
+        <button mat-menu-item>Under Investigation</button>
+        <button mat-menu-item>Under Monitoring</button>
+        <button mat-menu-item>Recovered</button>
+        <button mat-menu-item>Deaths</button>
+      </mat-menu> -->
+      <button mat-button (click)="redirectTo('uploadform')">Upload File</button>
+      <button mat-button (click)="redirectTo('self_assessment')">Health Check</button>
+      <button mat-button (click)="redirectTo('about')">About Us</button>
+    </div>
+    
+  </div>
+  
+</mat-toolbar>

@@ -1,0 +1,48 @@
+<div class="dashboard">
+
+  <app-header></app-header>
+
+<div class="container center-container">
+
+  <div class="stats-container">
+
+    <div class="summary-details">
+      <!-- <h4><span>Date:</span> {{showDate}}</h4> -->
+      <h4>
+        Summary as of: <span>{{showDate}}</span>
+      </h4>
+    </div>
+
+    <div class="totals_" *ngIf="totals">
+      <mat-card class="total_cards" *ngFor="let total of totals">
+        <mat-card-header>
+          <mat-card-title>
+            {{total.value === null ? 'N/A' : total.value}}
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            <span [innerHTML]="total.text"></span>
+            </p>
+        </mat-card-content>  
+      </mat-card>
+    </div>
+  </div>
+
+  <div *ngIf="patients !== undefined">
+    <app-patients-list [patients]="patients"></app-patients-list>
+  </div>
+  
+  
+
+</div>
+
+</div>
+
+
+<!-- 
+id: 0
+value: 136
+text: "Total<br> Deaths"
+color: "color: #900" 
+-->

@@ -1,0 +1,37 @@
+.dashboard {
+
+  .container {
+
+    .summary-details {
+
+      h4 {
+        // font-weight: normal;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: normal;
+        span {
+          // color: #e02f84;
+          font-weight: bold;
+          margin-left: 10px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .totals_ {
+      display: flex;
+
+      .total_cards {
+        margin: 0 10px;
+        text-align: center;
+        min-width: 100px;
+
+        .mat-card-header-text {
+          margin: 0 auto;
+        }
+      }
+    }
+
+  }
+
+}
