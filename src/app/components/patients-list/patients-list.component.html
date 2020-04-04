@@ -1,0 +1,64 @@
+
+<h4>
+  Patients Information
+</h4>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+      <td mat-cell *matCellDef="let row"> {{row.attributes.PH_masterl}} </td>
+    </ng-container>
+
+    <!-- Nationality Column -->
+    <ng-container matColumnDef="nationality">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Nationality </th>
+      <td mat-cell *matCellDef="let row"> {{row.attributes.nationalit}} </td>
+    </ng-container>
+
+    <!-- Residence Column -->
+    <ng-container matColumnDef="residence">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Residence </th>
+      <td mat-cell *matCellDef="let row"> {{row.attributes.residence}} </td>
+    </ng-container>
+
+    <!-- Travel History Column -->
+    <ng-container matColumnDef="travel_history">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Travel history </th>
+      <td mat-cell *matCellDef="let row"> {{row.attributes.travel_hx}} </td>
+    </ng-container>
+
+     <!-- Status Column -->
+     <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+      <td mat-cell *matCellDef="let row"> {{row.attributes.status}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+    </tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[10, 20, 50, 100]"></mat-paginator>
+</div>
+
+
+<!-- FID: 1
+//     sequ: 1
+//     PH_masterl: "PH1"
+//     edad: 38
+//     kasarian: "Female"
+//     nationalit: "Chinese"
+//     residence: "None"
+//     travel_hx: "Yes (China); Wife of PH2"
+//     symptoms: " "
+//     confirmed: "1/30/2020"
+//     facility: "SAN LAZARO HOSPITAL"
+//     latitude: 14.61348
+//     longitude: 120.98095
+//     status: "Recovered"
+//     epi_link: " "
+//     petsa: "1/29/2020 16:00"
+//     statusColor: "background-color: #4CAF50; color:#FFF;" -->
