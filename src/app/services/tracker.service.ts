@@ -23,15 +23,15 @@ export class TrackerService {
   }
 
   getCity = () => {
-    return this.http.post(this.byCity,'', this.requestOptions);
+    return this.http.get(this.byCity);
   }
 
   getTotal = () => {
-    return this.http.post(this.totals, this.requestOptions);
+    return this.http.get(this.totals);
   }
 
   getPatients = () => {
-    return this.http.post(this.patientList, this.requestOptions);
+    return this.http.get(this.patientList);
   }
 
 }
